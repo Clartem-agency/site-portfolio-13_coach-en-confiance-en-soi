@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alexandre Moreau - Coach en Confiance en Soi pour Jeunes Professionnels</title>
+    
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom Tailwind Configuration -->
+    <script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    background: '#ffffff',
+                    foreground: '#1d2530',
+                    card: {
+                        DEFAULT: '#ffffff',
+                        foreground: '#1d2530',
+                    },
+                    primary: {
+                        DEFAULT: '#3473b2',
+                        foreground: '#ffffff',
+                        light: '#c5d9e6',
+                        soft: 'hsl(208, 55%, 65%)',
+                    },
+                    secondary: {
+                        DEFAULT: '#61e8e9',
+                        light: '#e1e8e9',
+                    },
+                    accent: {
+                        DEFAULT: '#f2b25a',
+                        foreground: '#1d2530',
+                        soft: 'hsl(39, 86%, 75%)',
+                    },
+                    text: {
+                        primary: '#1d2530',
+                        secondary: '#627084',
+                        muted: '#9da4af',
+                    },
+                    border: '#e2e8e9',
+                    input: '#f8f9fa',
+                    surface: {
+                        elevated: '#f8f9fa'
+                    },
+                },
+                fontFamily: {
+                    sans: ['Poppins', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+                },
+                boxShadow: {
+                    soft: '0 4px 12px rgba(0,0,0,0.05)',
+                    medium: '0 8px 24px rgba(0,0,0,0.08)',
+                    large: '0 12px 36px rgba(0,0,0,0.12)',
+                },
+                backgroundImage: {
+                    'gradient-soft': 'linear-gradient(180deg, #FFFFFF 0%, #F8F9FA 100%)',
+                    'gradient-hero': 'linear-gradient(90deg, #3473b2 0%, #61e8e9 100%)',
+                },
+                keyframes: {
+                    'accordion-down': {
+                        from: { height: '0' },
+                        to: { height: 'var(--radix-accordion-content-height)' },
+                    },
+                    'accordion-up': {
+                        from: { height: 'var(--radix-accordion-content-height)' },
+                        to: { height: '0' },
+                    },
+                },
+                animation: {
+                    'accordion-down': 'accordion-down 0.2s ease-out',
+                    'accordion-up': 'accordion-up 0.2s ease-out',
+                },
+            }
+        }
+    }
+    </script>
+    <style>
+        /* Additional style to ensure smooth scrolling for all browsers */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-background text-text-secondary">
+
+    <!-- Main Container -->
+    <div class="min-h-screen">
+
+        <!-- Header Section -->
+        <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-background/95 backdrop-blur-sm shadow-soft border-b border-border">
+            <div class="container mx-auto px-6">
+                <div class="flex items-center justify-between h-20 md:h-16">
+                    <!-- Logo / Brand Name -->
+                    <a href="#hero" class="font-bold text-xl text-text-primary cursor-pointer">
+                        Alexandre Moreau
+                        <span class="block text-xs font-normal text-text-secondary">Coach en Confiance</span>
+                    </a>
+
+                    <!-- Desktop Navigation -->
+                    <nav class="hidden md:flex items-center space-x-8">
+                        <a href="#hero" class="text-text-secondary hover:text-primary transition-colors duration-200 font-medium">Accueil</a>
+                        <a href="#about" class="text-text-secondary hover:text-primary transition-colors duration-200 font-medium">À Propos</a>
+                        <a href="#services" class="text-text-secondary hover:text-primary transition-colors duration-200 font-medium">Accompagnements</a>
+                        <a href="#approche" class="text-text-secondary hover:text-primary transition-colors duration-200 font-medium">Mon Approche</a>
+                        <a href="#testimonials" class="text-text-secondary hover:text-primary transition-colors duration-200 font-medium">Témoignages</a>
+                        <a href="#contact" class="text-text-secondary hover:text-primary transition-colors duration-200 font-medium">Contact</a>
+                    </nav>
+
+                    <!-- Contact Info & CTA (Desktop) -->
+                    <div class="hidden lg:flex items-center space-x-4">
+                        <div class="flex items-center space-x-2 text-sm text-text-secondary">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                            <span>+33 7 89 01 23 45</span>
+                        </div>
+                        <a href="#rendez-vous" class="h-9 bg-accent text-accent-foreground shadow-soft hover:shadow-medium hover:bg-accent-soft transition-all duration-300 font-semibold py-3 px-6 rounded-lg inline-flex items-center justify-center text-sm">Appel Gratuit</a>
+                    </div>
+
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-button" class="md:hidden p-2 text-text-primary">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>
+                    </button>
+                </div>
+            </div>
+             <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden bg-background border-t border-border">
+                <nav class="flex flex-col items-center p-4 space-y-4">
+                    <a href="#hero" class="text-text-secondary hover:text-primary transition-colors duration-200 font-medium">Accueil</a>
+                    <a href="#about" class="text-text-secondary hover:text-primary transition-colors duration-200 font-medium">À Propos</a>
+                    <a href="#services" class="text-text-secondary hover:text-primary transition-colors duration-200 font-medium">Accompagnements</a>
+                    <a href="#approche" class="text-text-secondary hover:text-primary transition-colors duration-200 font-medium">Mon Approche</a>
+                    <a href="#testimonials" class="text-text-secondary hover:text-primary transition-colors duration-200 font-medium">Témoignages</a>
+                    <a href="#contact" class="text-text-secondary hover:text-primary transition-colors duration-200 font-medium">Contact</a>
+                    <a href="#rendez-vous" class="w-full text-center h-9 bg-accent text-accent-foreground shadow-soft hover:shadow-medium hover:bg-accent-soft transition-all duration-300 font-semibold py-2 px-6 rounded-lg inline-flex items-center justify-center text-sm">Appel Gratuit</a>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section id="hero" class="min-h-screen flex items-center justify-center bg-gradient-soft relative overflow-hidden pt-16">
+            <!-- Background decorative blobs -->
+            <div class="absolute inset-0">
+                <div class="absolute top-1/4 left-1/4 w-64 h-64 bg-primary-light rounded-full opacity-20 blur-3xl"></div>
+                <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary-light rounded-full opacity-15 blur-3xl"></div>
+            </div>
+            
+            <div class="container mx-auto px-6 text-center relative z-10">
+                <div class="max-w-4xl mx-auto space-y-8">
+                    <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-text-primary leading-tight">
+                        Arrêtez de douter. 
+                        <span class="bg-gradient-hero bg-clip-text text-transparent">
+                            Osez prendre votre place.
+                        </span>
+                    </h1>
+                    <p class="text-xl md:text-2xl text-text-secondary max-w-3xl mx-auto leading-relaxed">
+                        Coaching pour jeunes professionnels qui veulent transformer le syndrome de l'imposteur en moteur de réussite. Je vous aide à révéler votre confiance pour enfin oser, agir et vous sentir légitime.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
+                         <a href="#rendez-vous" class="h-10 bg-gradient-hero text-primary-foreground shadow-medium hover:shadow-large transition-all duration-300 border-0 text-lg font-semibold py-4 px-8 rounded-xl inline-flex items-center justify-center">Réserver mon appel clarté</a>
+                         <a href="#approche" class="h-10 px-4 py-2 bg-primary-light text-primary hover:bg-primary-soft hover:text-primary-foreground transition-all duration-300 shadow-soft rounded-lg inline-flex items-center justify-center text-sm font-medium">Découvrir mon approche</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-24 bg-background">
+            <div class="container mx-auto px-6">
+                <div class="max-w-4xl mx-auto">
+                    <h2 class="text-4xl md:text-5xl font-bold text-text-primary text-center mb-12">Mon Chemin : De l'ombre à la lumière</h2>
+                    <div class="prose prose-lg max-w-none text-text-secondary leading-relaxed space-y-6 text-justify">
+                        <p>Pendant près de 10 ans, j'étais développeur web. J'étais bon dans mon travail, mais invisible. J'étais ce collègue silencieux en réunion, la tête remplie d'idées mais incapable de les exprimer, persuadé qu'elles n'étaient pas assez bonnes. Je voyais des opportunités me passer sous le nez, non pas par manque de compétences, mais par manque de confiance. Le syndrome de l'imposteur était mon compagnon de route quotidien, et il me coûtait ma carrière et mon épanouissement.</p>
+                        <p>Le déclic a eu lieu le jour où j'ai réalisé que mon expertise technique ne servirait à rien si je ne croyais pas en sa valeur. J'ai alors fait le premier pas, celui qui fait peur : j'ai demandé de l'aide. Le coaching a été une révélation. J'ai compris que la confiance n'était pas un don inné, mais une compétence qui se construit, pas à pas. J'ai appris à déconstruire mes croyances limitantes, à reconnaître ma valeur et à utiliser ma sensibilité non pas comme une faiblesse, mais comme une force.</p>
+                        <p>Aujourd'hui, ma mission est de vous faire gagner ce temps précieux. Je ne suis pas devenu coach par hasard, mais par conviction. Je sais ce que c'est que de se sentir en décalage, de douter de chaque décision. Mon approche unique allie la structure et la logique de mon passé d'ingénieur à l'empathie profonde de celui qui a parcouru le même chemin. Mon but n'est pas de vous donner des réponses toutes faites, mais de vous aider à trouver les vôtres, pour que vous puissiez, à votre tour, prendre votre juste place, avec assurance et sérénité.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-24 bg-surface-elevated">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-bold text-text-primary mb-6">Les Parcours pour Bâtir Votre Confiance</h2>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto items-start">
+                    
+                    <!-- Service Card 1: Séance "Impulsion" -->
+                    <div class="rounded-lg text-card-foreground shadow-soft hover:shadow-large transition-all duration-300 bg-card p-6 flex flex-col h-full">
+                        <div class="text-center pb-4">
+                            <h3 class="text-2xl font-bold text-text-primary mb-3">Séance "Impulsion"</h3>
+                            <p class="text-sm text-text-secondary leading-relaxed">Une séance intensive de 90 minutes pour débloquer une situation précise. Idéal si vous faites face à un défi imminent (une présentation, un entretien, une décision à prendre) et avez besoin d'un boost de clarté et de confiance pour passer à l'action.</p>
+                        </div>
+                        <div class="space-y-6 flex-grow flex flex-col">
+                            <ul class="space-y-3 flex-grow">
+                                <li class="flex items-start space-x-3"><div class="w-2 h-2 bg-primary rounded-full mt-1.5 flex-shrink-0"></div><span class="text-text-secondary text-sm leading-relaxed">Analyse ciblée de votre blocage</span></li>
+                                <li class="flex items-start space-x-3"><div class="w-2 h-2 bg-primary rounded-full mt-1.5 flex-shrink-0"></div><span class="text-text-secondary text-sm leading-relaxed">Définition d'un objectif clair et atteignable</span></li>
+                                <li class="flex items-start space-x-3"><div class="w-2 h-2 bg-primary rounded-full mt-1.5 flex-shrink-0"></div><span class="text-text-secondary text-sm leading-relaxed">Mise en place d'un plan d'action concret et immédiat</span></li>
+                                <li class="flex items-start space-x-3"><div class="w-2 h-2 bg-primary rounded-full mt-1.5 flex-shrink-0"></div><span class="text-text-secondary text-sm leading-relaxed">Vous repartez avec des outils activables tout de suite</span></li>
+                            </ul>
+                            <div class="border-t pt-6 space-y-4">
+                                <div class="text-center">
+                                    <div class="text-3xl font-bold text-primary">180€</div>
+                                    <div class="text-text-muted text-sm">Séance de 90 minutes</div>
+                                </div>
+                                <a href="#rendez-vous" class="w-full h-10 px-4 py-2 bg-primary-light text-primary hover:bg-primary-soft hover:text-primary-foreground transition-all duration-300 shadow-soft rounded-lg inline-flex items-center justify-center text-sm font-medium">Réserver ma Séance Impulsion</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service Card 2: Parcours "Transformation" (Featured) -->
+                    <div class="rounded-lg text-card-foreground shadow-sm relative transition-all duration-300 hover:shadow-large border-0 shadow-soft lg:scale-105 bg-gradient-soft p-6 flex flex-col h-full">
+                        <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                            <span class="bg-gradient-hero text-primary-foreground px-6 py-2 rounded-full text-sm font-semibold shadow-medium">Parcours Phare</span>
+                        </div>
+                        <div class="text-center pt-6 pb-4">
+                            <h3 class="text-2xl font-bold text-text-primary mb-3">Parcours "Transformation"</h3>
+                            <p class="text-sm text-text-secondary leading-relaxed">L'accompagnement phare sur 3 mois pour une refonte profonde et durable de votre confiance. C'est le parcours idéal pour déraciner le syndrome de l'imposteur, renforcer votre estime personnelle et oser enfin lancer les projets qui vous tiennent à cœur.</p>
+                        </div>
+                        <div class="space-y-6 flex-grow flex flex-col">
+                            <ul class="space-y-3 flex-grow">
+                                <li class="flex items-start space-x-3"><div class="w-2 h-2 bg-primary rounded-full mt-1.5 flex-shrink-0"></div><span class="text-text-secondary text-sm leading-relaxed">Une séance de Bilan & Vision de 2h pour poser les fondations</span></li>
+                                <li class="flex items-start space-x-3"><div class="w-2 h-2 bg-primary rounded-full mt-1.5 flex-shrink-0"></div><span class="text-text-secondary text-sm leading-relaxed">6 séances de coaching de 1h toutes les deux semaines</span></li>
+                                <li class="flex items-start space-x-3"><div class="w-2 h-2 bg-primary rounded-full mt-1.5 flex-shrink-0"></div><span class="text-text-secondary text-sm leading-relaxed">Des exercices personnalisés entre chaque séance pour ancrer le changement</span></li>
+                                <li class="flex items-start space-x-3"><div class="w-2 h-2 bg-primary rounded-full mt-1.5 flex-shrink-0"></div><span class="text-text-secondary text-sm leading-relaxed">Un suivi par email pour célébrer les victoires et surmonter les obstacles</span></li>
+                                <li class="flex items-start space-x-3"><div class="w-2 h-2 bg-primary rounded-full mt-1.5 flex-shrink-0"></div><span class="text-text-secondary text-sm leading-relaxed">Une séance de clôture pour valider votre envol en autonomie</span></li>
+                            </ul>
+                            <div class="border-t pt-6 space-y-4">
+                                <div class="text-center">
+                                    <div class="text-3xl font-bold text-primary">950€</div>
+                                    <div class="text-text-muted text-sm">Forfait 3 mois</div>
+                                </div>
+                                <a href="#rendez-vous" class="w-full h-10 bg-gradient-hero text-primary-foreground shadow-medium hover:shadow-large transition-all duration-300 border-0 text-lg font-semibold py-4 px-8 rounded-xl inline-flex items-center justify-center">Démarrer ma Transformation</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service Card 3: Atelier "Prise de Parole Sereine" -->
+                    <div class="rounded-lg text-card-foreground shadow-soft hover:shadow-large transition-all duration-300 bg-card p-6 flex flex-col h-full">
+                        <div class="text-center pb-4">
+                            <h3 class="text-2xl font-bold text-text-primary mb-3">Atelier "Prise de Parole Sereine"</h3>
+                            <p class="text-sm text-text-secondary leading-relaxed">Un programme de groupe en ligne sur 4 semaines pour transformer la peur de parler en public en une opportunité de briller. Nous travaillons en petit comité pour créer un espace de confiance où chacun peut s'entraîner et recevoir des retours constructifs.</p>
+                        </div>
+                        <div class="space-y-6 flex-grow flex flex-col">
+                            <ul class="space-y-3 flex-grow">
+                                <li class="flex items-start space-x-3"><div class="w-2 h-2 bg-primary rounded-full mt-1.5 flex-shrink-0"></div><span class="text-text-secondary text-sm leading-relaxed">4 sessions de groupe de 2h en visioconférence</span></li>
+                                <li class="flex items-start space-x-3"><div class="w-2 h-2 bg-primary rounded-full mt-1.5 flex-shrink-0"></div><span class="text-text-secondary text-sm leading-relaxed">Module 1 : Gérer le trac et l'anxiété</span></li>
+                                <li class="flex items-start space-x-3"><div class="w-2 h-2 bg-primary rounded-full mt-1.5 flex-shrink-0"></div><span class="text-text-secondary text-sm leading-relaxed">Module 2 : Structurer son message pour captiver</span></li>
+                                <li class="flex items-start space-x-3"><div class="w-2 h-2 bg-primary rounded-full mt-1.5 flex-shrink-0"></div><span class="text-text-secondary text-sm leading-relaxed">Module 3 : Maîtriser sa voix et son langage corporel</span></li>
+                                <li class="flex items-start space-x-3"><div class="w-2 h-2 bg-primary rounded-full mt-1.5 flex-shrink-0"></div><span class="text-text-secondary text-sm leading-relaxed">Module 4 : Mises en situation et plan d'entraînement personnalisé</span></li>
+                            </ul>
+                            <div class="border-t pt-6 space-y-4">
+                                <div class="text-center">
+                                    <div class="text-3xl font-bold text-primary">490€</div>
+                                    <div class="text-text-muted text-sm">Programme de 4 semaines</div>
+                                </div>
+                                <a href="#rendez-vous" class="w-full h-9 bg-accent text-accent-foreground shadow-soft hover:shadow-medium hover:bg-accent-soft transition-all duration-300 font-semibold py-3 px-6 rounded-lg inline-flex items-center justify-center text-sm">Rejoindre le prochain atelier</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Approach Section -->
+        <section id="approche" class="py-24 bg-background">
+            <div class="container mx-auto px-6">
+                <div class="max-w-4xl mx-auto text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-bold text-text-primary mb-6">Notre Chemin Ensemble, Pas à Pas</h2>
+                    <p class="text-xl text-text-secondary leading-relaxed">Chaque accompagnement est unique, car vous êtes unique. Cependant, pour que vous vous sentiez en parfaite sécurité, notre collaboration suit un cadre bienveillant et structuré. Voici les grandes étapes de notre chemin ensemble.</p>
+                </div>
+                <div class="max-w-3xl mx-auto space-y-12">
+                    <!-- Step 1 -->
+                    <div class="flex flex-col md:flex-row items-start gap-8 group">
+                        <div class="flex-shrink-0">
+                            <div class="w-16 h-16 bg-gradient-hero rounded-xl flex items-center justify-center shadow-medium group-hover:shadow-large transition-all duration-300">
+                                <span class="text-2xl font-bold text-primary-foreground">1</span>
+                            </div>
+                        </div>
+                        <div class="flex-1 space-y-4 text-left">
+                            <h3 class="text-2xl font-bold text-text-primary leading-tight">L'Appel Clarté : Notre Première Connexion (Offert)</h3>
+                            <p class="text-text-secondary leading-relaxed text-lg">Tout commence par un échange gratuit de 30 minutes, en toute confidentialité. C'est un moment pour faire connaissance, que vous m'exposiez votre situation sans jugement, et que nous validions ensemble que je suis la bonne personne pour vous aider. Il n'y a aucune obligation, seulement une conversation.</p>
+                        </div>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="flex flex-col md:flex-row items-start gap-8 group">
+                        <div class="flex-shrink-0">
+                             <div class="w-16 h-16 bg-gradient-hero rounded-xl flex items-center justify-center shadow-medium group-hover:shadow-large transition-all duration-300">
+                                <span class="text-2xl font-bold text-primary-foreground">2</span>
+                            </div>
+                        </div>
+                        <div class="flex-1 space-y-4 text-left">
+                            <h3 class="text-2xl font-bold text-text-primary leading-tight">Les Séances : Le Cœur de la Transformation</h3>
+                            <p class="text-text-secondary leading-relaxed text-lg">Au fil de nos séances, nous explorons vos blocages, nous fixons des objectifs clairs et nous mettons en place des actions concrètes. Je suis là pour vous écouter activement, vous challenger avec bienveillance et vous donner les outils pragmatiques pour avancer. Chaque séance est un pas de plus vers la personne que vous souhaitez devenir.</p>
+                        </div>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="flex flex-col md:flex-row items-start gap-8 group">
+                        <div class="flex-shrink-0">
+                             <div class="w-16 h-16 bg-gradient-hero rounded-xl flex items-center justify-center shadow-medium group-hover:shadow-large transition-all duration-300">
+                                <span class="text-2xl font-bold text-primary-foreground">3</span>
+                            </div>
+                        </div>
+                        <div class="flex-1 space-y-4 text-left">
+                            <h3 class="text-2xl font-bold text-text-primary leading-tight">L'Envol : Votre Autonomie</h3>
+                            <p class="text-text-secondary leading-relaxed text-lg">Mon objectif final est de devenir inutile ! À la fin de notre parcours, nous célébrons vos progrès et nous nous assurons que vous avez toutes les clés en main pour continuer votre chemin avec confiance et sérénité. Vous ne repartez pas avec des réponses, mais avec la capacité de trouver les vôtres.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="univers" class="py-24 bg-surface-elevated">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-bold text-text-primary mb-6">Un Espace de Confiance pour Vous Accueillir</h2>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    <!-- Gallery Item 1 -->
+                    <div class="group">
+                        <div class="relative overflow-hidden rounded-xl shadow-soft group-hover:shadow-large transition-all duration-300">
+                            <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1932&auto=format&fit=crop" alt="Bureau moderne et chaleureux avec fauteuil confortable" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <p class="mt-4 text-text-secondary text-center leading-relaxed">Un cadre confidentiel et bienveillant, en visio ou en présentiel, pensé pour votre confort.</p>
+                    </div>
+                    <!-- Gallery Item 2 -->
+                    <div class="group">
+                        <div class="relative overflow-hidden rounded-xl shadow-soft group-hover:shadow-large transition-all duration-300">
+                            <img src="https://images.unsplash.com/photo-1517842645767-c6f90415ad90?q=80&w=2070&auto=format&fit=crop" alt="Carnet de notes avec objectifs et plan d'action" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <p class="mt-4 text-text-secondary text-center leading-relaxed">Mon approche : allier l'écoute profonde à des outils structurés pour un changement concret.</p>
+                    </div>
+                    <!-- Gallery Item 3 -->
+                    <div class="group">
+                        <div class="relative overflow-hidden rounded-xl shadow-soft group-hover:shadow-large transition-all duration-300">
+                            <img src="https://images.unsplash.com/photo-1531891437562-4301cf35b7e4?q=80&w=1964&auto=format&fit=crop" alt="Portrait d'Alexandre Moreau en séance d'écoute" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <p class="mt-4 text-text-secondary text-center leading-relaxed">Une écoute sans jugement, au service de votre transformation.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="py-24 bg-background">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-bold text-text-primary mb-6">Leurs Histoires, Leurs Transformations</h2>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    <!-- Testimonial 1 -->
+                    <div class="border-0 shadow-soft hover:shadow-medium transition-all duration-300 bg-card rounded-lg">
+                        <div class="p-8">
+                            <div class="mb-6">
+                                <div class="text-4xl text-primary mb-4">"</div>
+                                <p class="text-text-secondary leading-relaxed italic">Avant de travailler avec Alexandre, j'étais paralysée par le syndrome de l'imposteur. Je n'osais jamais prendre la parole en réunion, persuadée que mes idées n'étaient pas pertinentes. Son écoute et ses outils pragmatiques m'ont aidée à déconstruire cette peur. Aujourd'hui, je mène des projets avec assurance et j'ai même obtenu la promotion que je n'osais pas demander. Ce coaching a été un véritable accélérateur de carrière.</p>
+                            </div>
+                            <div class="border-t pt-6">
+                                <div class="font-semibold text-text-primary">Clara D.</div>
+                                <div class="text-text-muted text-sm">Chef de Projet Marketing</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonial 2 -->
+                    <div class="border-0 shadow-soft hover:shadow-medium transition-all duration-300 bg-card rounded-lg">
+                        <div class="p-8">
+                            <div class="mb-6">
+                                <div class="text-4xl text-primary mb-4">"</div>
+                                <p class="text-text-secondary leading-relaxed italic">En tant que développeur freelance, j'avais du mal à valoriser mon travail et à fixer des tarifs justes. J'acceptais des missions qui ne me plaisaient pas par peur de dire non. Le coaching avec Alexandre m'a donné la confiance nécessaire pour affirmer ma valeur, doubler mon tarif journalier et choisir des clients alignés avec mes compétences. C'est un investissement qui a été rentabilisé en moins d'un mois.</p>
+                            </div>
+                            <div class="border-t pt-6">
+                                <div class="font-semibold text-text-primary">Julien M.</div>
+                                <div class="text-text-muted text-sm">Développeur Freelance</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonial 3 -->
+                    <div class="border-0 shadow-soft hover:shadow-medium transition-all duration-300 bg-card rounded-lg">
+                         <div class="p-8">
+                            <div class="mb-6">
+                                <div class="text-4xl text-primary mb-4">"</div>
+                                <p class="text-text-secondary leading-relaxed italic">J'avais un projet de création d'entreprise qui dormait dans un tiroir depuis deux ans, bloqué par la peur de l'échec. Alexandre m'a aidé à découper mon grand rêve en petites étapes réalisables. Sa structure et ses encouragements constants m'ont permis de passer à l'action. J'ai lancé mon site il y a un mois et je viens de signer mes premiers clients. Je ne le remercierai jamais assez.</p>
+                            </div>
+                            <div class="border-t pt-6">
+                                <div class="font-semibold text-text-primary">Sophie L.</div>
+                                <div class="text-text-muted text-sm">Jeune Entrepreneure</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="py-24 bg-surface-elevated">
+            <div class="container mx-auto px-6">
+                <div class="max-w-3xl mx-auto">
+                    <div class="text-center mb-16">
+                        <h2 class="text-4xl md:text-5xl font-bold text-text-primary mb-6">Vos Questions, Mes Réponses</h2>
+                    </div>
+                    <div id="accordion-container" class="space-y-4">
+                        <!-- FAQ Item 1 -->
+                        <div class="accordion-item bg-card border-0 shadow-soft rounded-lg px-6 hover:shadow-medium transition-all duration-300">
+                            <button class="accordion-trigger flex w-full items-center justify-between py-4 text-left text-text-primary font-semibold hover:text-primary transition-colors duration-200">
+                                Quelle est la différence entre le coaching et la thérapie ?
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 shrink-0 transition-transform duration-200"><path d="m6 9 6 6 6-6"></path></svg>
+                            </button>
+                            <div class="accordion-content overflow-hidden transition-all duration-300 ease-in-out" style="max-height: 0;">
+                                <p class="text-text-secondary leading-relaxed pt-2 pb-4">La thérapie se concentre souvent sur le passé pour guérir des blessures et comprendre le "pourquoi" de nos difficultés. Le coaching est orienté vers le futur : nous partons de votre situation actuelle pour définir des objectifs clairs et mettre en place des actions concrètes pour les atteindre. Nous nous concentrons sur le "comment" avancer.</p>
+                            </div>
+                        </div>
+                        <!-- FAQ Item 2 -->
+                         <div class="accordion-item bg-card border-0 shadow-soft rounded-lg px-6 hover:shadow-medium transition-all duration-300">
+                            <button class="accordion-trigger flex w-full items-center justify-between py-4 text-left text-text-primary font-semibold hover:text-primary transition-colors duration-200">
+                                Combien de séances faut-il prévoir pour voir des résultats ?
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 shrink-0 transition-transform duration-200"><path d="m6 9 6 6 6-6"></path></svg>
+                            </button>
+                            <div class="accordion-content overflow-hidden transition-all duration-300 ease-in-out" style="max-height: 0;">
+                                <p class="text-text-secondary leading-relaxed pt-2 pb-4">Chaque personne est différente. La séance "Impulsion" peut suffire pour un déblocage ponctuel. Pour une transformation en profondeur, le "Parcours Transformation" de 3 mois est idéal. Les premiers changements sont souvent ressentis dès les premières séances, car nous mettons l'accent sur l'action dès le départ.</p>
+                            </div>
+                        </div>
+                        <!-- FAQ Item 3 -->
+                         <div class="accordion-item bg-card border-0 shadow-soft rounded-lg px-6 hover:shadow-medium transition-all duration-300">
+                            <button class="accordion-trigger flex w-full items-center justify-between py-4 text-left text-text-primary font-semibold hover:text-primary transition-colors duration-200">
+                                Je n'ai jamais fait de coaching, est-ce que c'est pour moi ?
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 shrink-0 transition-transform duration-200"><path d="m6 9 6 6 6-6"></path></svg>
+                            </button>
+                            <div class="accordion-content overflow-hidden transition-all duration-300 ease-in-out" style="max-height: 0;">
+                                <p class="text-text-secondary leading-relaxed pt-2 pb-4">Absolument. Le coaching est pour toute personne qui se sent bloquée et qui est prête à s'investir pour changer. Aucune expérience n'est requise. L'appel clarté offert est justement là pour vous permettre de découvrir l'approche sans engagement et de voir si cela vous correspond.</p>
+                            </div>
+                        </div>
+                        <!-- FAQ Item 4 -->
+                         <div class="accordion-item bg-card border-0 shadow-soft rounded-lg px-6 hover:shadow-medium transition-all duration-300">
+                            <button class="accordion-trigger flex w-full items-center justify-between py-4 text-left text-text-primary font-semibold hover:text-primary transition-colors duration-200">
+                                Nos échanges sont-ils confidentiels ?
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 shrink-0 transition-transform duration-200"><path d="m6 9 6 6 6-6"></path></svg>
+                            </button>
+                            <div class="accordion-content overflow-hidden transition-all duration-300 ease-in-out" style="max-height: 0;">
+                                <p class="text-text-secondary leading-relaxed pt-2 pb-4">La confidentialité est la base de notre relation de confiance. Tout ce que nous partageons lors de nos séances reste strictement entre nous, conformément au code de déontologie de la profession de coach.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-16 bg-background">
+            <div class="container mx-auto px-6">
+                <div class="max-w-4xl mx-auto">
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl md:text-4xl font-bold text-text-primary mb-4">Contact & Informations</h2>
+                        <p class="text-text-secondary leading-relaxed">Vous avez une question sur mes accompagnements ? Vous préférez un premier contact par écrit ? N'hésitez pas à utiliser le moyen qui vous convient le mieux. Je me ferai un plaisir de vous répondre sous 48h ouvrées.</p>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-12 items-start">
+                        <!-- Contact Info Card -->
+                        <div class="space-y-8">
+                            <div class="rounded-lg text-card-foreground shadow-soft bg-card border-0">
+                                <div class="p-6">
+                                    <h3 class="tracking-tight text-xl font-semibold text-text-primary">Informations de Contact</h3>
+                                </div>
+                                <div class="p-6 pt-0 space-y-6">
+                                    <div class="flex items-start space-x-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-primary mt-1 flex-shrink-0"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                                        <div>
+                                            <h4 class="font-semibold text-text-primary mb-1">Adresse du Cabinet</h4>
+                                            <p class="text-text-secondary text-sm">WeWork, 123 Rue de la République<br>69002 Lyon<br><span class="text-text-muted">(Consultations sur RDV uniquement)</span></p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start space-x-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-primary mt-1 flex-shrink-0"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                                        <div>
+                                            <h4 class="font-semibold text-text-primary mb-1">Téléphone</h4>
+                                            <p class="text-text-secondary">+33 7 89 01 23 45</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start space-x-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-primary mt-1 flex-shrink-0"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+                                        <div>
+                                            <h4 class="font-semibold text-text-primary mb-1">Email</h4>
+                                            <p class="text-text-secondary">alexandre.moreau.coaching@email.com</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start space-x-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-primary mt-1 flex-shrink-0"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                                        <div>
+                                            <h4 class="font-semibold text-text-primary mb-1">Horaires</h4>
+                                            <p class="text-text-secondary text-sm">Du Lundi au Vendredi, de 9h à 19h</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Contact Form Card -->
+                        <div class="rounded-lg text-card-foreground shadow-soft bg-card border-0">
+                            <div class="p-6">
+                                <h3 class="tracking-tight text-xl font-semibold text-text-primary">Envoyez-moi un message</h3>
+                            </div>
+                            <div class="p-6 pt-0">
+                                <form class="space-y-4">
+                                    <div><input type="text" class="flex h-10 w-full rounded-md border px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 border-border bg-input" name="name" placeholder="Votre nom" required=""></div>
+                                    <div><input type="email" class="flex h-10 w-full rounded-md border px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 border-border bg-input" name="email" placeholder="Votre email" required=""></div>
+                                    <div><textarea class="flex min-h-[80px] w-full rounded-md border px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 border-border bg-input resize-none" name="message" placeholder="Votre message..." required="" rows="4"></textarea></div>
+                                    <button type="submit" class="w-full h-10 px-4 py-2 bg-primary hover:bg-primary-soft text-primary-foreground inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors">Envoyer le message</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Booking Section -->
+        <section id="rendez-vous" class="py-24 bg-surface-elevated">
+            <div class="container mx-auto px-6">
+                <div class="max-w-3xl mx-auto text-center">
+                    <h2 class="text-4xl md:text-5xl font-bold text-text-primary mb-6">Prêt(e) à faire le premier pas ?</h2>
+                    <p class="text-xl text-text-secondary mb-12 leading-relaxed">Réservez votre appel clarté offert directement dans mon agenda. C'est le premier pas, simple, confidentiel et sans engagement.</p>
+                    <div class="rounded-lg border-0 shadow-large bg-gradient-soft max-w-2xl mx-auto">
+                        <div class="text-center p-6 pb-4">
+                            <h3 class="tracking-tight text-2xl font-bold text-text-primary">Appel Clarté Offert</h3>
+                            <p class="text-lg text-text-secondary">30 minutes • Gratuit • Sans engagement</p>
+                        </div>
+                        <div class="p-6 pt-0 space-y-6">
+                            <p class="text-text-secondary leading-relaxed">Cet échange de 30 minutes est l'occasion de faire connaissance, de m'exposer votre situation et de voir si le courant passe entre nous. C'est le moment idéal pour poser toutes vos questions avant de vous engager.</p>
+                            <div class="space-y-4">
+                                <a href="#rendez-vous" class="w-full text-lg py-4 h-auto bg-gradient-hero text-primary-foreground shadow-medium hover:shadow-large transition-all duration-300 border-0 font-semibold px-8 rounded-xl inline-flex items-center justify-center">Réserver mon appel clarté maintenant</a>
+                                <p class="text-sm text-text-muted">📅 Créneaux disponibles du lundi au vendredi, de 9h à 19h</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-12 space-y-4">
+                        <p class="text-text-secondary"><strong class="font-semibold">Question pour préparer notre échange :</strong></p>
+                        <p class="text-text-muted italic">"Quel est le défi principal qui vous amène ici aujourd'hui ?"</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-text-primary text-background">
+            <div class="container mx-auto px-6 py-16">
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                    <!-- Footer: Brand and Contact -->
+                    <div class="lg:col-span-2 space-y-6">
+                        <div>
+                            <h3 class="text-2xl font-bold mb-2">Alexandre Moreau</h3>
+                            <p class="text-background/80 mb-4">Coach en confiance en soi pour jeunes professionnels. Transformez votre syndrome de l'imposteur en moteur de réussite.</p>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="flex items-center space-x-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-accent"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg><span class="text-background/90">+33 7 89 01 23 45</span></div>
+                            <div class="flex items-center space-x-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-accent"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg><span class="text-background/90">alexandre.moreau.coaching@email.com</span></div>
+                            <div class="flex items-center space-x-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-accent"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg><span class="text-background/90">Lyon, France</span></div>
+                            <div class="flex items-center space-x-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-accent"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg><span class="text-background/90">Lun-Ven : 9h-19h</span></div>
+                        </div>
+                        <div class="flex space-x-4">
+                            <a href="#" class="p-2 bg-background/10 hover:bg-background/20 rounded-lg transition-colors duration-200"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+                            <a href="#" class="p-2 bg-background/10 hover:bg-background/20 rounded-lg transition-colors duration-200"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg></a>
+                        </div>
+                    </div>
+                    <!-- Footer: Links 1 -->
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Mes Accompagnements</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#services" class="text-background/80 hover:text-accent transition-colors duration-200 text-left">Séance Impulsion</a></li>
+                            <li><a href="#services" class="text-background/80 hover:text-accent transition-colors duration-200 text-left">Parcours Transformation</a></li>
+                            <li><a href="#services" class="text-background/80 hover:text-accent transition-colors duration-200 text-left">Atelier Prise de Parole</a></li>
+                            <li><a href="#approche" class="text-background/80 hover:text-accent transition-colors duration-200 text-left">Mon Approche</a></li>
+                        </ul>
+                    </div>
+                    <!-- Footer: Links 2 -->
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Ressources</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#about" class="text-background/80 hover:text-accent transition-colors duration-200 text-left">À Propos</a></li>
+                            <li><a href="#testimonials" class="text-background/80 hover:text-accent transition-colors duration-200 text-left">Témoignages</a></li>
+                            <li><a href="#faq" class="text-background/80 hover:text-accent transition-colors duration-200 text-left">Questions Fréquentes</a></li>
+                            <li><a href="#rendez-vous" class="text-background/80 hover:text-accent transition-colors duration-200 text-left">Réserver un Appel</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Footer CTA -->
+                <div class="bg-background/5 rounded-xl p-8 mb-12 text-center">
+                    <h3 class="text-2xl font-bold mb-4">Prêt(e) à transformer votre confiance ?</h3>
+                    <p class="text-background/80 mb-6 max-w-2xl mx-auto">Réservez votre appel clarté gratuit de 30 minutes. Aucun engagement, juste une conversation pour voir si nous sommes faits pour travailler ensemble.</p>
+                    <a href="#rendez-vous" class="h-9 bg-accent text-accent-foreground shadow-soft hover:shadow-medium hover:bg-accent-soft transition-all duration-300 font-semibold py-3 px-6 rounded-lg inline-flex items-center justify-center text-sm">Réserver mon appel gratuit</a>
+                </div>
+
+                <!-- Footer Bottom Bar -->
+                <div class="border-t border-background/20 pt-8">
+                    <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+                        <div class="text-background/60 text-sm">© 2024 Alexandre Moreau. Tous droits réservés.</div>
+                        <div class="flex items-center space-x-1 text-background/60 text-sm">
+                            <span>Créé avec</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-accent"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path></svg>
+                            <span>pour votre transformation</span>
+                        </div>
+                        <div class="flex space-x-6 text-sm">
+                            <a href="#" class="text-background/60 hover:text-accent transition-colors duration-200">Mentions Légales</a>
+                            <a href="#" class="text-background/60 hover:text-accent transition-colors duration-200">Politique de Confidentialité</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // --- Mobile Menu Toggle ---
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileNavLinks = mobileMenu.querySelectorAll('a');
+
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+                
+                mobileNavLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                    });
+                });
+            }
+
+            // --- Accordion Functionality ---
+            const accordionItems = document.querySelectorAll('.accordion-item');
+
+            accordionItems.forEach(item => {
+                const trigger = item.querySelector('.accordion-trigger');
+                const content = item.querySelector('.accordion-content');
+                const icon = trigger.querySelector('svg');
+
+                trigger.addEventListener('click', () => {
+                    const isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+
+                    // Close all other items
+                    accordionItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            const otherTrigger = otherItem.querySelector('.accordion-trigger');
+                            const otherContent = otherItem.querySelector('.accordion-content');
+                            const otherIcon = otherTrigger.querySelector('svg');
+                            
+                            otherTrigger.setAttribute('aria-expanded', 'false');
+                            otherContent.style.maxHeight = '0';
+                            otherIcon.style.transform = 'rotate(0deg)';
+                        }
+                    });
+
+                    // Toggle the clicked item
+                    if (isExpanded) {
+                        trigger.setAttribute('aria-expanded', 'false');
+                        content.style.maxHeight = '0';
+                        icon.style.transform = 'rotate(0deg)';
+                    } else {
+                        trigger.setAttribute('aria-expanded', 'true');
+                        content.style.maxHeight = content.scrollHeight + 'px';
+                        icon.style.transform = 'rotate(180deg)';
+                    }
+                });
+            });
+
+        });
+    </script>
+</body>
+</html>
