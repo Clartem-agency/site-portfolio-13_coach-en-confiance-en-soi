@@ -94,53 +94,59 @@
     <div class="min-h-screen">
 
         <!-- Header Section -->
-        <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-background/95 backdrop-blur-sm shadow-soft border-b border-border">
-            <div class="container mx-auto px-6">
-                <div class="flex items-center justify-between h-20 md:h-16">
-                    <!-- Logo / Brand Name -->
-                    <a href="#hero" class="font-bold text-xl text-text-primary cursor-pointer">
-                        Alexandre Moreau
-                        <span class="block text-xs font-normal text-text-secondary">Coach en Confiance</span>
-                    </a>
+<header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-background/95 backdrop-blur-sm shadow-soft border-b border-border">
+    <div class="container mx-auto px-6">
+        <!-- CHANGEMENT : Hauteur du header réduite pour un look plus standard sur desktop -->
+        <div class="flex items-center justify-between h-16">
+            <!-- Logo / Brand Name -->
+            <a href="#hero" class="cursor-pointer">
+                <!-- CHANGEMENT : Taille du nom légèrement réduite pour mieux s'équilibrer avec le reste -->
+                <div class="font-bold text-lg text-text-primary">Alexandre Moreau</div>
+                <span class="block text-xs font-normal text-text-secondary">Coach en Confiance</span>
+            </a>
 
-                    <!-- Desktop Navigation -->
-                    <nav class="hidden md:flex items-center space-x-8">
-                        <a href="#hero" class="text-text-secondary hover:text-primary transition-colors duration-200 font-medium">Accueil</a>
-                        <a href="#about" class="text-text-secondary hover:text-primary transition-colors duration-200 font-medium">À Propos</a>
-                        <a href="#services" class="text-text-secondary hover:text-primary transition-colors duration-200 font-medium">Accompagnements</a>
-                        <a href="#approche" class="text-text-secondary hover:text-primary transition-colors duration-200 font-medium">Mon Approche</a>
-                        <a href="#testimonials" class="text-text-secondary hover:text-primary transition-colors duration-200 font-medium">Témoignages</a>
-                        <a href="#contact" class="text-text-secondary hover:text-primary transition-colors duration-200 font-medium">Contact</a>
-                    </nav>
+            <!-- Desktop Navigation -->
+            <!-- CHANGEMENT : Espacement réduit de space-x-8 à space-x-6 -->
+            <nav class="hidden md:flex items-center space-x-6">
+                <!-- CHANGEMENT : Ajout de "text-sm" pour réduire la taille de la police sur tous les liens -->
+                <a href="#hero" class="text-sm text-text-secondary hover:text-primary transition-colors duration-200 font-medium">Accueil</a>
+                <a href="#about" class="text-sm text-text-secondary hover:text-primary transition-colors duration-200 font-medium">À Propos</a>
+                <a href="#services" class="text-sm text-text-secondary hover:text-primary transition-colors duration-200 font-medium">Accompagnements</a>
+                <a href="#approche" class="text-sm text-text-secondary hover:text-primary transition-colors duration-200 font-medium">Mon Approche</a>
+                <a href="#testimonials" class="text-sm text-text-secondary hover:text-primary transition-colors duration-200 font-medium">Témoignages</a>
+                <a href="#contact" class="text-sm text-text-secondary hover:text-primary transition-colors duration-200 font-medium">Contact</a>
+            </nav>
 
-                    <!-- Contact Info & CTA (Desktop) -->
-                    <div class="hidden lg:flex items-center space-x-4">
-                        <div class="flex items-center space-x-2 text-sm text-text-secondary">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-                            <span>+33 7 89 01 23 45</span>
-                        </div>
-                        <a href="#rendez-vous" class="h-9 bg-accent text-accent-foreground shadow-soft hover:shadow-medium hover:bg-accent-soft transition-all duration-300 font-semibold py-3 px-6 rounded-lg inline-flex items-center justify-center text-sm">Appel Gratuit</a>
-                    </div>
-
-                    <!-- Mobile Menu Button -->
-                    <button id="mobile-menu-button" class="md:hidden p-2 text-text-primary">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>
-                    </button>
+            <!-- Contact Info & CTA (Desktop) -->
+            <div class="hidden lg:flex items-center space-x-4">
+                <div class="flex items-center space-x-2 text-sm text-text-secondary">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                    <!-- CHANGEMENT : Ajout de "whitespace-nowrap" pour empêcher le numéro de passer à la ligne -->
+                    <span class="whitespace-nowrap">+33 7 89 01 23 45</span>
                 </div>
+                <!-- CHANGEMENT : Padding ajusté (py-2 px-4) et ajout de "whitespace-nowrap" pour que le bouton reste sur une ligne -->
+                <a href="#rendez-vous" class="h-9 bg-accent text-accent-foreground shadow-soft hover:shadow-medium hover:bg-accent-soft transition-all duration-300 font-semibold py-2 px-4 rounded-lg inline-flex items-center justify-center text-sm whitespace-nowrap">Appel Gratuit</a>
             </div>
-             <!-- Mobile Menu -->
-            <div id="mobile-menu" class="hidden md:hidden bg-background border-t border-border">
-                <nav class="flex flex-col items-center p-4 space-y-4">
-                    <a href="#hero" class="text-text-secondary hover:text-primary transition-colors duration-200 font-medium">Accueil</a>
-                    <a href="#about" class="text-text-secondary hover:text-primary transition-colors duration-200 font-medium">À Propos</a>
-                    <a href="#services" class="text-text-secondary hover:text-primary transition-colors duration-200 font-medium">Accompagnements</a>
-                    <a href="#approche" class="text-text-secondary hover:text-primary transition-colors duration-200 font-medium">Mon Approche</a>
-                    <a href="#testimonials" class="text-text-secondary hover:text-primary transition-colors duration-200 font-medium">Témoignages</a>
-                    <a href="#contact" class="text-text-secondary hover:text-primary transition-colors duration-200 font-medium">Contact</a>
-                    <a href="#rendez-vous" class="w-full text-center h-9 bg-accent text-accent-foreground shadow-soft hover:shadow-medium hover:bg-accent-soft transition-all duration-300 font-semibold py-2 px-6 rounded-lg inline-flex items-center justify-center text-sm">Appel Gratuit</a>
-                </nav>
-            </div>
-        </header>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden p-2 text-text-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>
+            </button>
+        </div>
+    </div>
+     <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-background border-t border-border">
+        <nav class="flex flex-col items-center p-4 space-y-4">
+            <a href="#hero" class="text-text-secondary hover:text-primary transition-colors duration-200 font-medium">Accueil</a>
+            <a href="#about" class="text-text-secondary hover:text-primary transition-colors duration-200 font-medium">À Propos</a>
+            <a href="#services" class="text-text-secondary hover:text-primary transition-colors duration-200 font-medium">Accompagnements</a>
+            <a href="#approche" class="text-text-secondary hover:text-primary transition-colors duration-200 font-medium">Mon Approche</a>
+            <a href="#testimonials" class="text-text-secondary hover:text-primary transition-colors duration-200 font-medium">Témoignages</a>
+            <a href="#contact" class="text-text-secondary hover:text-primary transition-colors duration-200 font-medium">Contact</a>
+            <a href="#rendez-vous" class="w-full text-center h-9 bg-accent text-accent-foreground shadow-soft hover:shadow-medium hover:bg-accent-soft transition-all duration-300 font-semibold py-2 px-6 rounded-lg inline-flex items-center justify-center text-sm">Appel Gratuit</a>
+        </nav>
+    </div>
+</header>
 
         <!-- Hero Section -->
         <section id="hero" class="min-h-screen flex items-center justify-center bg-gradient-soft relative overflow-hidden pt-16">
@@ -451,98 +457,98 @@
             </div>
         </section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="py-16 bg-background">
-            <div class="container mx-auto px-6">
-                <div class="max-w-4xl mx-auto">
-                    <div class="text-center mb-12">
-                        <h2 class="text-3xl md:text-4xl font-bold text-text-primary mb-4">Contact & Informations</h2>
-                        <p class="text-text-secondary leading-relaxed">Vous avez une question sur mes accompagnements ? Vous préférez un premier contact par écrit ? N'hésitez pas à utiliser le moyen qui vous convient le mieux. Je me ferai un plaisir de vous répondre sous 48h ouvrées.</p>
-                    </div>
-                    <div class="grid md:grid-cols-2 gap-12 items-start">
-                        <!-- Contact Info Card -->
-                        <div class="space-y-8">
-                            <div class="rounded-lg text-card-foreground shadow-soft bg-card border-0">
-                                <div class="p-6">
-                                    <h3 class="tracking-tight text-xl font-semibold text-text-primary">Informations de Contact</h3>
-                                </div>
-                                <div class="p-6 pt-0 space-y-6">
-                                    <div class="flex items-start space-x-3">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-primary mt-1 flex-shrink-0"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                                        <div>
-                                            <h4 class="font-semibold text-text-primary mb-1">Adresse du Cabinet</h4>
-                                            <p class="text-text-secondary text-sm">WeWork, 123 Rue de la République<br>69002 Lyon<br><span class="text-text-muted">(Consultations sur RDV uniquement)</span></p>
-                                        </div>
-                                    </div>
-                                    <div class="flex items-start space-x-3">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-primary mt-1 flex-shrink-0"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-                                        <div>
-                                            <h4 class="font-semibold text-text-primary mb-1">Téléphone</h4>
-                                            <p class="text-text-secondary">+33 7 89 01 23 45</p>
-                                        </div>
-                                    </div>
-                                    <div class="flex items-start space-x-3">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-primary mt-1 flex-shrink-0"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
-                                        <div>
-                                            <h4 class="font-semibold text-text-primary mb-1">Email</h4>
-                                            <p class="text-text-secondary">alexandre.moreau.coaching@email.com</p>
-                                        </div>
-                                    </div>
-                                    <div class="flex items-start space-x-3">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-primary mt-1 flex-shrink-0"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-                                        <div>
-                                            <h4 class="font-semibold text-text-primary mb-1">Horaires</h4>
-                                            <p class="text-text-secondary text-sm">Du Lundi au Vendredi, de 9h à 19h</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Contact Form Card -->
-                        <div class="rounded-lg text-card-foreground shadow-soft bg-card border-0">
-                            <div class="p-6">
-                                <h3 class="tracking-tight text-xl font-semibold text-text-primary">Envoyez-moi un message</h3>
-                            </div>
-                            <div class="p-6 pt-0">
-                                <form class="space-y-4">
-                                    <div><input type="text" class="flex h-10 w-full rounded-md border px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 border-border bg-input" name="name" placeholder="Votre nom" required=""></div>
-                                    <div><input type="email" class="flex h-10 w-full rounded-md border px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 border-border bg-input" name="email" placeholder="Votre email" required=""></div>
-                                    <div><textarea class="flex min-h-[80px] w-full rounded-md border px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 border-border bg-input resize-none" name="message" placeholder="Votre message..." required="" rows="4"></textarea></div>
-                                    <button type="submit" class="w-full h-10 px-4 py-2 bg-primary hover:bg-primary-soft text-primary-foreground inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors">Envoyer le message</button>
-                                </form>
-                            </div>
-                        </div>
+        <!-- Booking Section -->
+<section id="rendez-vous" class="py-24 bg-background">
+    <div class="container mx-auto px-6">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-4xl md:text-5xl font-bold text-text-primary mb-6">Prêt(e) à faire le premier pas ?</h2>
+            <p class="text-xl text-text-secondary mb-12 leading-relaxed">Réservez votre appel clarté offert directement dans mon agenda. C'est le premier pas, simple, confidentiel et sans engagement.</p>
+            <div class="rounded-lg border-0 shadow-large bg-gradient-soft max-w-2xl mx-auto">
+                <div class="text-center p-6 pb-4">
+                    <h3 class="tracking-tight text-2xl font-bold text-text-primary">Appel Clarté Offert</h3>
+                    <p class="text-lg text-text-secondary">30 minutes • Gratuit • Sans engagement</p>
+                </div>
+                <div class="p-6 pt-0 space-y-6">
+                    <p class="text-text-secondary leading-relaxed">Cet échange de 30 minutes est l'occasion de faire connaissance, de m'exposer votre situation et de voir si le courant passe entre nous. C'est le moment idéal pour poser toutes vos questions avant de vous engager.</p>
+                    <div class="space-y-4">
+                        <a href="#rendez-vous" class="w-full text-lg py-4 h-auto bg-gradient-hero text-primary-foreground shadow-medium hover:shadow-large transition-all duration-300 border-0 font-semibold px-8 rounded-xl inline-flex items-center justify-center">Réserver mon appel clarté maintenant</a>
+                        <p class="text-sm text-text-muted">📅 Créneaux disponibles du lundi au vendredi, de 9h à 19h</p>
                     </div>
                 </div>
             </div>
-        </section>
+            <div class="mt-12 space-y-4">
+                <p class="text-text-secondary"><strong class="font-semibold">Question pour préparer notre échange :</strong></p>
+                <p class="text-text-muted italic">"Quel est le défi principal qui vous amène ici aujourd'hui ?"</p>
+            </div>
+        </div>
+    </div>
+</section>
 
-        <!-- Booking Section -->
-        <section id="rendez-vous" class="py-24 bg-surface-elevated">
-            <div class="container mx-auto px-6">
-                <div class="max-w-3xl mx-auto text-center">
-                    <h2 class="text-4xl md:text-5xl font-bold text-text-primary mb-6">Prêt(e) à faire le premier pas ?</h2>
-                    <p class="text-xl text-text-secondary mb-12 leading-relaxed">Réservez votre appel clarté offert directement dans mon agenda. C'est le premier pas, simple, confidentiel et sans engagement.</p>
-                    <div class="rounded-lg border-0 shadow-large bg-gradient-soft max-w-2xl mx-auto">
-                        <div class="text-center p-6 pb-4">
-                            <h3 class="tracking-tight text-2xl font-bold text-text-primary">Appel Clarté Offert</h3>
-                            <p class="text-lg text-text-secondary">30 minutes • Gratuit • Sans engagement</p>
+        <!-- Contact Section -->
+<section id="contact" class="py-16 bg-surface-elevated">
+    <div class="container mx-auto px-6">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-text-primary mb-4">Contact & Informations</h2>
+                <p class="text-text-secondary leading-relaxed">Vous avez une question sur mes accompagnements ? Vous préférez un premier contact par écrit ? N'hésitez pas à utiliser le moyen qui vous convient le mieux. Je me ferai un plaisir de vous répondre sous 48h ouvrées.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12 items-start">
+                <!-- Contact Info Card -->
+                <div class="space-y-8">
+                    <div class="rounded-lg text-card-foreground shadow-soft bg-card border-0">
+                        <div class="p-6">
+                            <h3 class="tracking-tight text-xl font-semibold text-text-primary">Informations de Contact</h3>
                         </div>
                         <div class="p-6 pt-0 space-y-6">
-                            <p class="text-text-secondary leading-relaxed">Cet échange de 30 minutes est l'occasion de faire connaissance, de m'exposer votre situation et de voir si le courant passe entre nous. C'est le moment idéal pour poser toutes vos questions avant de vous engager.</p>
-                            <div class="space-y-4">
-                                <a href="#rendez-vous" class="w-full text-lg py-4 h-auto bg-gradient-hero text-primary-foreground shadow-medium hover:shadow-large transition-all duration-300 border-0 font-semibold px-8 rounded-xl inline-flex items-center justify-center">Réserver mon appel clarté maintenant</a>
-                                <p class="text-sm text-text-muted">📅 Créneaux disponibles du lundi au vendredi, de 9h à 19h</p>
+                            <div class="flex items-start space-x-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-primary mt-1 flex-shrink-0"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                                <div>
+                                    <h4 class="font-semibold text-text-primary mb-1">Adresse du Cabinet</h4>
+                                    <p class="text-text-secondary text-sm">WeWork, 123 Rue de la République<br>69002 Lyon<br><span class="text-text-muted">(Consultations sur RDV uniquement)</span></p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-primary mt-1 flex-shrink-0"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                                <div>
+                                    <h4 class="font-semibold text-text-primary mb-1">Téléphone</h4>
+                                    <p class="text-text-secondary">+33 7 89 01 23 45</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-primary mt-1 flex-shrink-0"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+                                <div>
+                                    <h4 class="font-semibold text-text-primary mb-1">Email</h4>
+                                    <p class="text-text-secondary">alexandre.moreau.coaching@email.com</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-primary mt-1 flex-shrink-0"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                                <div>
+                                    <h4 class="font-semibold text-text-primary mb-1">Horaires</h4>
+                                    <p class="text-text-secondary text-sm">Du Lundi au Vendredi, de 9h à 19h</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="mt-12 space-y-4">
-                        <p class="text-text-secondary"><strong class="font-semibold">Question pour préparer notre échange :</strong></p>
-                        <p class="text-text-muted italic">"Quel est le défi principal qui vous amène ici aujourd'hui ?"</p>
+                </div>
+                <!-- Contact Form Card -->
+                <div class="rounded-lg text-card-foreground shadow-soft bg-card border-0">
+                    <div class="p-6">
+                        <h3 class="tracking-tight text-xl font-semibold text-text-primary">Envoyez-moi un message</h3>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <form class="space-y-4">
+                            <div><input type="text" class="flex h-10 w-full rounded-md border px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 border-border bg-input" name="name" placeholder="Votre nom" required=""></div>
+                            <div><input type="email" class="flex h-10 w-full rounded-md border px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 border-border bg-input" name="email" placeholder="Votre email" required=""></div>
+                            <div><textarea class="flex min-h-[80px] w-full rounded-md border px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 border-border bg-input resize-none" name="message" placeholder="Votre message..." required="" rows="4"></textarea></div>
+                            <button type="submit" class="w-full h-10 px-4 py-2 bg-primary hover:bg-primary-soft text-primary-foreground inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors">Envoyer le message</button>
+                        </form>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </div>
+</section>
 
         <!-- Footer -->
         <footer class="bg-text-primary text-background">
@@ -585,13 +591,6 @@
                             <li><a href="#rendez-vous" class="text-background/80 hover:text-accent transition-colors duration-200 text-left">Réserver un Appel</a></li>
                         </ul>
                     </div>
-                </div>
-
-                <!-- Footer CTA -->
-                <div class="bg-background/5 rounded-xl p-8 mb-12 text-center">
-                    <h3 class="text-2xl font-bold mb-4">Prêt(e) à transformer votre confiance ?</h3>
-                    <p class="text-background/80 mb-6 max-w-2xl mx-auto">Réservez votre appel clarté gratuit de 30 minutes. Aucun engagement, juste une conversation pour voir si nous sommes faits pour travailler ensemble.</p>
-                    <a href="#rendez-vous" class="h-9 bg-accent text-accent-foreground shadow-soft hover:shadow-medium hover:bg-accent-soft transition-all duration-300 font-semibold py-3 px-6 rounded-lg inline-flex items-center justify-center text-sm">Réserver mon appel gratuit</a>
                 </div>
 
                 <!-- Footer Bottom Bar -->
