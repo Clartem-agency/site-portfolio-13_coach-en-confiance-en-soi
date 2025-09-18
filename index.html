@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alexandre Moreau - Coach en Confiance en Soi pour Jeunes Professionnels</title>
     
+    <!-- AJOUT : Balises pour l'aperçu sur les réseaux sociaux -->
+    <meta property="og:title" content="Alexandre Moreau - Coach en Confiance en Soi">
+    <meta property="og:description" content="Coaching pour jeunes professionnels qui veulent transformer le syndrome de l'imposteur en moteur de réussite.">
+    <meta property="og:image" content="https://www.votresite.com/images/apercu-partage-social.webp">
+    <meta property="og:url" content="https://www.votresite.com/">
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- FIN AJOUT -->
+
     <!-- Tailwind CSS via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     
@@ -149,9 +157,10 @@
 </header>
 
         <!-- Hero Section -->
-        <section id="hero" class="min-h-screen flex items-center justify-center bg-gradient-soft relative overflow-hidden pt-16">
+        <!-- MODIFICATION : Ajout d'une image de fond via la propriété style et suppression de la classe bg-gradient-soft -->
+        <section id="hero" class="min-h-screen flex items-center justify-center relative overflow-hidden pt-16" style="background-image: url('images/hero-background.webp'); background-size: cover; background-position: center;">
             <!-- Background decorative blobs -->
-            <div class="absolute inset-0">
+            <div class="absolute inset-0 bg-white/50"> <!-- Ajout d'un léger voile blanc pour la lisibilité du texte sur l'image -->
                 <div class="absolute top-1/4 left-1/4 w-64 h-64 bg-primary-light rounded-full opacity-20 blur-3xl"></div>
                 <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary-light rounded-full opacity-15 blur-3xl"></div>
             </div>
@@ -176,18 +185,33 @@
         </section>
 
         <!-- About Section -->
-        <section id="about" class="py-24 bg-background">
-            <div class="container mx-auto px-6">
-                <div class="max-w-4xl mx-auto">
-                    <h2 class="text-4xl md:text-5xl font-bold text-text-primary text-center mb-12">Mon Chemin : De l'ombre à la lumière</h2>
-                    <div class="prose prose-lg max-w-none text-text-secondary leading-relaxed space-y-6 text-justify">
+<section id="about" class="py-24 bg-background">
+    <div class="container mx-auto px-6">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-bold text-text-primary text-center mb-16">Mon Chemin : De l'ombre à la lumière</h2>
+            
+            <!-- MODIFICATION : Ajout d'un conteneur flex pour l'image et le texte -->
+            <div class="flex flex-col md:flex-row items-start gap-12">
+                
+                <!-- Colonne de l'image -->
+                <div class="w-full md:w-1/3 flex-shrink-0">
+                    <img src="images/portrait-alexandre-moreau-about.webp" 
+                         alt="Portrait d'Alexandre Moreau, coach en confiance en soi" 
+                         class="rounded-xl shadow-medium w-full object-cover aspect-square">
+                </div>
+
+                <!-- Colonne du texte -->
+                <div class="w-full md:w-2/3">
+                    <div class="prose prose-lg max-w-none text-text-secondary leading-relaxed space-y-6">
                         <p>Pendant près de 10 ans, j'étais développeur web. J'étais bon dans mon travail, mais invisible. J'étais ce collègue silencieux en réunion, la tête remplie d'idées mais incapable de les exprimer, persuadé qu'elles n'étaient pas assez bonnes. Je voyais des opportunités me passer sous le nez, non pas par manque de compétences, mais par manque de confiance. Le syndrome de l'imposteur était mon compagnon de route quotidien, et il me coûtait ma carrière et mon épanouissement.</p>
                         <p>Le déclic a eu lieu le jour où j'ai réalisé que mon expertise technique ne servirait à rien si je ne croyais pas en sa valeur. J'ai alors fait le premier pas, celui qui fait peur : j'ai demandé de l'aide. Le coaching a été une révélation. J'ai compris que la confiance n'était pas un don inné, mais une compétence qui se construit, pas à pas. J'ai appris à déconstruire mes croyances limitantes, à reconnaître ma valeur et à utiliser ma sensibilité non pas comme une faiblesse, mais comme une force.</p>
                         <p>Aujourd'hui, ma mission est de vous faire gagner ce temps précieux. Je ne suis pas devenu coach par hasard, mais par conviction. Je sais ce que c'est que de se sentir en décalage, de douter de chaque décision. Mon approche unique allie la structure et la logique de mon passé d'ingénieur à l'empathie profonde de celui qui a parcouru le même chemin. Mon but n'est pas de vous donner des réponses toutes faites, mais de vous aider à trouver les vôtres, pour que vous puissiez, à votre tour, prendre votre juste place, avec assurance et sérénité.</p>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </div>
+</section>
 
         <!-- Services Section -->
         <section id="services" class="py-24 bg-surface-elevated">
@@ -332,21 +356,24 @@
                     <!-- Gallery Item 1 -->
                     <div class="group">
                         <div class="relative overflow-hidden rounded-xl shadow-soft group-hover:shadow-large transition-all duration-300">
-                            <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1932&auto=format&fit=crop" alt="Bureau moderne et chaleureux avec fauteuil confortable" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+                            <!-- MODIFICATION : Chemin, nom et format de l'image -->
+                            <img src="images/bureau-coaching-moderne.webp" alt="Bureau moderne et chaleureux avec fauteuil confortable" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
                         </div>
                         <p class="mt-4 text-text-secondary text-center leading-relaxed">Un cadre confidentiel et bienveillant, en visio ou en présentiel, pensé pour votre confort.</p>
                     </div>
                     <!-- Gallery Item 2 -->
                     <div class="group">
                         <div class="relative overflow-hidden rounded-xl shadow-soft group-hover:shadow-large transition-all duration-300">
-                            <img src="https://images.unsplash.com/photo-1517842645767-c6f90415ad90?q=80&w=2070&auto=format&fit=crop" alt="Carnet de notes avec objectifs et plan d'action" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+                            <!-- MODIFICATION : Chemin, nom et format de l'image -->
+                            <img src="images/carnet-objectifs-coaching.webp" alt="Carnet de notes avec objectifs et plan d'action" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
                         </div>
                         <p class="mt-4 text-text-secondary text-center leading-relaxed">Mon approche : allier l'écoute profonde à des outils structurés pour un changement concret.</p>
                     </div>
                     <!-- Gallery Item 3 -->
                     <div class="group">
                         <div class="relative overflow-hidden rounded-xl shadow-soft group-hover:shadow-large transition-all duration-300">
-                            <img src="https://images.unsplash.com/photo-1531891437562-4301cf35b7e4?q=80&w=1964&auto=format&fit=crop" alt="Portrait d'Alexandre Moreau en séance d'écoute" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+                            <!-- MODIFICATION : Chemin, nom et format de l'image -->
+                            <img src="images/portrait-alexandre-moreau.webp" alt="Portrait d'Alexandre Moreau en séance d'écoute" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
                         </div>
                         <p class="mt-4 text-text-secondary text-center leading-relaxed">Une écoute sans jugement, au service de votre transformation.</p>
                     </div>
