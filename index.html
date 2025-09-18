@@ -190,14 +190,14 @@
         <div class="max-w-5xl mx-auto">
             <h2 class="text-4xl md:text-5xl font-bold text-text-primary text-center mb-16">Mon Chemin : De l'ombre à la lumière</h2>
             
-            <!-- MODIFICATION : Ajout d'un conteneur flex pour l'image et le texte -->
-            <div class="flex flex-col md:flex-row items-start gap-12">
+            <!-- MODIFICATION : Passage à 'items-center' pour un meilleur alignement vertical avec l'image plus haute -->
+            <div class="flex flex-col md:flex-row items-center gap-12">
                 
                 <!-- Colonne de l'image -->
                 <div class="w-full md:w-1/3 flex-shrink-0">
                     <img src="images/portrait-alexandre-moreau-about.webp" 
                          alt="Portrait d'Alexandre Moreau, coach en confiance en soi" 
-                         class="rounded-xl shadow-medium w-full object-cover aspect-square">
+                         class="rounded-xl shadow-medium w-full object-cover aspect-[9/16]"> <!-- MODIFICATION : 'aspect-square' remplacé par 'aspect-[9/16]' -->
                 </div>
 
                 <!-- Colonne du texte -->
